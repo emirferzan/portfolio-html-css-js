@@ -1,6 +1,6 @@
 @media screen and (max-width: 600px) {
-    .section__pic-container {
-      display: none; /* Completely hides it */
+    .binary-canvas-container {
+      display: none;
     }
   }
 
