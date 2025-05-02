@@ -1,4 +1,16 @@
-
+@media (max-width: 600px) {
+    #binary-canvas {
+      width: 90vw;
+      height: 90vw;
+      max-width: 300px;
+      max-height: 300px;
+    }
+  
+    .about-detailes-container {
+      padding: 1rem;
+      font-size: 0.95rem;
+    }
+  }
 
 @media screen and (max-width: 1200px) {
     #desktop-nav {
