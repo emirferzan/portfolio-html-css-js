@@ -28,7 +28,6 @@ const bits = [];
 const bitHeight = fontSize;
 const bitWidth = fontSize;
 
-// Populate array of 'bits'
 for(let r = 0; r < rows; r++) {
   for(let c = 0; c < columns; c++) {
     bits.push({
@@ -40,14 +39,12 @@ for(let r = 0; r < rows; r++) {
   }
 }
 
-// Vars for manually calculating frame rate
 const fps = 1;
 const interval = 1000/fps;
 let now;
 let then = Date.now();
 let delta;
 
-// Draw all bits once before starting animation
 for(let bit of bits) {
   ctx.clearRect(bit.x, bit.y, bitWidth, bitHeight);
   ctx.fillText(bit.value, bit.x, bit.y + bitHeight);
@@ -61,7 +58,7 @@ function draw() {
 
   if (delta > interval) {
     for(let bit of bits) {
-      if(bit.hasDrawn === true && (Math.random() * 100) > 95) { // If passes the randomness check
+      if(bit.hasDrawn === true && (Math.random() * 100) > 95) { 
         let newVal = (bit.value === binChars[1]) ? binChars[0] : binChars[1];
 
         ctx.clearRect(bit.x, bit.y, bitWidth, bitHeight);
